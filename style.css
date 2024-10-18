@@ -3,6 +3,11 @@ img {
   margin: auto;
 }
 
+li {
+  display: inline-block;
+  margin-right: 10px; /* add spacing between items */
+}
+
 #para1{
   font-family: Franklin Gothic Medium ;
   color: floralwhite;
