@@ -97,3 +97,25 @@
   height: auto;
   object-fit: cover;
 }
+
+body {
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ajustements pour le texte */
+h1, h2, h3, p {
+  margin: 10px;
+  text-align: center;
+}
+
+/* Ajustement des marges et du padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
