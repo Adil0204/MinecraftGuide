@@ -119,3 +119,39 @@ body, html {
   width: 100%;
   min-height: 100%;
 }
+
+/* Définition de la police Minecraftia */
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('Fonts/Minecraftia-Regular.ttf') format('truetype');
+}
+
+/* Application de la police par défaut sur tout le site */
+body {
+  font-family: 'Minecraftia', sans-serif;
+}
+
+/* Style du menu */
+#menu a {
+  color: #ffffff; /* Couleur blanche */
+  text-decoration: none; /* Enlève le soulignement */
+  transition: 0.3s; /* Animation douce au survol */
+}
+
+/* Effet hover (optionnel) */
+#menu a:hover {
+  color: #aaaaaa; /* Gris clair au survol */
+}
+
+/* Style des éléments de la liste */
+#menu li {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Pour s'assurer que la police s'applique aussi au menu */
+#menu {
+  font-family: 'Minecraftia', sans-serif;
+}
