@@ -1,150 +1,99 @@
-
-#full-width-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%; 
-}
-
+/* Styles de base */
 #gray-section {
   background-color: #303030;
-  height: 10vh;
+  min-height: 10vh;
   width: 100%; 
   display: flex;
+  flex-wrap: wrap; /* Permet au contenu de passer à la ligne sur mobile */
   align-items: center;
   justify-content: center;
-}
-
-#menu {
-  list-style: none;
-  padding: 0; 
-  margin: 0;
-  text-align: center;
-}
-
-#menu li {
-  display: inline-block; 
-  margin-right: 10px; 
-  padding: 10px; 
+  padding: 10px 0;
 }
 
 #logo {
-  height: 12vh;
-  display: flex; 
-  position: absolute; 
-  top: -1%; 
-  left: 2%; 
-  z-index: 1000; 
+  height: auto;
+  max-height: 12vh;
+  width: auto;
+  position: relative; /* Change la position absolue */
+  margin: 5px auto;
 }
 
-#menu a {
-  color: white;
-  text-decoration: none; 
-}
-
-@font-face {
-  font-family: 'Minecraftia';
-  src: url('Fonts/Minecraftia-Regular.ttf') format('truetype'); 
-}
-
-body {
-  font-family: 'Minecraftia', sans-serif; 
-}
-
-#split-container {
-  display: flex;
+#menu {
   width: 100%;
-  min-height: 50vh; 
-}
-
-#split-left {
-  width: 50%;
-  background-color: #f0f0f0; 
-  padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-#split-right {
-  width: 50%;
-  background-color: #e0e0e0; 
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#menu li {
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
 }
 
-#split-title {
-  font-size: 24px;
-  margin-bottom: 20px;
+/* Split container responsive */
+#split-container {
+  flex-direction: column; /* Empile les sections sur mobile */
 }
 
-#bee {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 20%; 
-  top: 30%; 
-  animation: hoverBee 2s ease-in-out infinite;
+#split-left, #split-right {
+  width: 100%; /* Pleine largeur sur mobile */
+  padding: 10px;
 }
 
-@keyframes hoverBee {
-  0% {
-    transform: translateY(0);
+/* Éléments animés */
+#bee, #sniffer, #sakura {
+  display: none; /* Cache les éléments animés sur mobile */
+}
+
+/* Media Queries pour différentes tailles d'écran */
+@media screen and (min-width: 768px) {
+  /* Tablettes et plus grand */
+  #gray-section {
+    flex-wrap: nowrap;
   }
-  50% {
-    transform: translateY(10px); 
+
+  #logo {
+    position: absolute;
+    top: -1%;
+    left: 2%;
   }
-  100% {
-    transform: translateY(0);
+
+  #menu {
+    width: auto;
+  }
+
+  #menu li {
+    font-size: 16px;
+  }
+
+  #split-container {
+    flex-direction: row;
+  }
+
+  #split-left, #split-right {
+    width: 50%;
+  }
+
+  #bee, #sniffer, #sakura {
+    display: block; /* Réaffiche les éléments animés */
   }
 }
 
-#sniffer {
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  left: 71%;
-  bottom: 25%; 
-  transform: translateX(-50%);
-  animation: snifferBob 2s ease-in-out infinite;
+@media screen and (max-width: 480px) {
+  /* Ajustements spécifiques pour très petits écrans */
+  #menu li {
+    font-size: 12px;
+    margin: 2px;
+    padding: 3px;
+  }
 }
 
-#sakura {
-  width: 130px;
-  height: 130px;
-  position: absolute;
-  right: 30%; 
-  top: 23%; 
-  animation: sakuraBob 2s ease-in-out infinite;
-  z-index: 1000;
-}
-
-#sakura1 {
-  width: 130px;
-  height: 130px;
-  position: absolute;
-  right: 5%; 
-  top: 60%; 
-  animation: sakuraBob 2s ease-in-out infinite;
-  z-index: 1000;
-}
-
-#sakura2 {
-  width: 130px;
-  height: 130px;
-  position: absolute;
-  left: 5%; 
-  top: 35%; 
-  animation: sakuraBob 2s ease-in-out infinite;
-  z-index: 1000;
+/* Ajustements pour l'image de fond */
+#full-width-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
