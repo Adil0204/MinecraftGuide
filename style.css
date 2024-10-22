@@ -37,6 +37,7 @@ body {
   justify-content: center;
   padding: 10px;
   position: relative;
+  z-index: 1001; /* Pour s'assurer que la nav reste au-dessus des GIFs */
 }
 
 #logo {
@@ -77,6 +78,8 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 /* Container split */
@@ -85,6 +88,8 @@ body {
   flex-direction: row;
   width: 100%;
   min-height: 300px;
+  position: relative;
+  z-index: 2;
 }
 
 #split-left, #split-right {
@@ -120,15 +125,13 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-/* Éléments animés - visibles uniquement sur desktop */
+/* Éléments animés - cachés par défaut */
 #bee, #sniffer, #sakura, #sakura1, #sakura2 {
   display: none;
-  position: absolute;
 }
 
-/* Media Queries */
+/* Media Queries pour desktop */
 @media screen and (min-width: 768px) {
-  /* Navigation pour desktop */
   #gray-section {
     height: 80px;
   }
@@ -141,19 +144,9 @@ body {
     font-size: 16px;
   }
 
-  /* Affichage des éléments animés sur desktop */
-  #bee {
-    display: block;
-    width: 50px;
-    height: 50px;
-    left: 20%;
-    top: 30%;
-    animation: hoverBee 2s ease-in-out infinite;
-  }
-
-  #sniffer {
-    display: block;
-    width: 90px;
-    height: 90px;
-    left: 71%;
-    bottom
+  /* Container pour les éléments animés */
+  .animated-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
