@@ -17,83 +17,129 @@ body, html {
 @font-face {
   font-family: 'Minecraftia';
   src: url('./Fonts/Minecraftia-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* Styles généraux */
 body {
   font-family: 'Minecraftia', sans-serif;
-  line-height: 1.6;
 }
 
 /* Barre de navigation */
 #gray-section {
   background-color: #303030;
   width: 100%;
-  min-height: 60px;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   position: relative;
-  z-index: 1001; /* Pour s'assurer que la nav reste au-dessus des GIFs */
+  z-index: 1000;
 }
 
 #logo {
-  height: 50px;
+  height: 12vh;
   position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 2%;
+  top: -1%;
+  z-index: 1001;
 }
 
 #menu {
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  list-style: none;
   gap: 20px;
   margin: 0;
   padding: 0;
 }
 
 #menu li {
-  padding: 5px;
+  white-space: nowrap;
 }
 
 #menu a {
   color: white;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s ease;
 }
 
-#menu a:hover {
-  color: #aaaaaa;
+/* Image principale et conteneur des GIFs */
+.main-content {
+  position: relative;
+  width: 100%;
 }
 
-/* Image principale */
 #full-width-image {
   width: 100%;
   height: auto;
   display: block;
-  position: relative;
-  z-index: 1;
 }
 
-/* Container split */
+/* Éléments animés */
+#bee {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  animation: hoverBee 2s ease-in-out infinite;
+}
+
+#sniffer {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 71%;
+  bottom: 25%;
+  animation: snifferBob 2s ease-in-out infinite;
+}
+
+#sakura, #sakura1, #sakura2 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  animation: sakuraBob 2s ease-in-out infinite;
+}
+
+#sakura {
+  right: 30%;
+  top: 23%;
+}
+
+#sakura1 {
+  right: 5%;
+  top: 60%;
+}
+
+#sakura2 {
+  left: 5%;
+  top: 35%;
+}
+
+/* Animations */
+@keyframes hoverBee {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes sakuraBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes snifferBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Split container */
 #split-container {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  min-height: 300px;
-  position: relative;
-  z-index: 2;
+  min-height: 50vh;
 }
 
 #split-left, #split-right {
-  flex: 1;
+  width: 50%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -111,42 +157,8 @@ body {
 #split-title {
   font-size: 24px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-/* Animations */
-@keyframes hoverBee {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-@keyframes sakuraBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Éléments animés - cachés par défaut */
-#bee, #sniffer, #sakura, #sakura1, #sakura2 {
-  display: none;
-}
-
-/* Media Queries pour desktop */
-@media screen and (min-width: 768px) {
-  #gray-section {
-    height: 80px;
-  }
-  
-  #logo {
-    height: 70px;
-  }
-
-  #menu a {
-    font-size: 16px;
-  }
-
-  /* Container pour les éléments animés */
-  .animated-elements {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  #gray
