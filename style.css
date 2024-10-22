@@ -44,7 +44,7 @@
 }
 
 /* Éléments animés */
-#bee, #sniffer, #sakura {
+#bee, #sniffer, #sakura, #sakura1, #sakura3 {
   display: none; /* Cache les éléments animés sur mobile */
 }
 
