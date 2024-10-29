@@ -1,0 +1,295 @@
+
+#full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+}
+
+#gray-section {
+  background-color: #303030;
+  height: 10vh;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu {
+  list-style: none;
+  padding: 0; 
+  margin: 0;
+  text-align: center;
+}
+
+#menu li {
+  display: inline-block; 
+  margin-right: 10px; 
+  padding: 10px; 
+}
+
+#logo {
+  height: 12vh;
+  display: flex; 
+  position: absolute; 
+  top: -1%; 
+  left: 2%; 
+  z-index: 1000; 
+}
+
+#menu a {
+  color: white;
+  text-decoration: none; 
+}
+
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('Fonts/Minecraftia-Regular.ttf') format('truetype'); 
+}
+
+body {
+  font-family: 'Minecraftia', sans-serif; 
+}
+
+#split-container {
+  display: flex;
+  width: 100%;
+  min-height: 50vh; 
+}
+
+#split-left {
+  padding: 5px; 
+  margin: 10px; 
+  border-radius: 5px;
+  border: 2px solid black; 
+  border-radius: 5px;
+  width: 50%;
+  background-color: #f0f0f0; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-right {
+  padding: 5px; 
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid black; 
+  border-radius: 5px;
+  width: 50%;
+  background-color: #e0e0e0; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-container2 {
+  display: flex;
+  width: 100%;
+  min-height: 50vh; 
+}
+
+#split-left2 {
+  padding: 5px; 
+  margin: 10px; 
+  border-radius: 5px;
+  border: 2px solid black; 
+  border-radius: 5px;
+  width: 50%;
+  background-color: #ff6600; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-right2 {
+  padding: 5px; 
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid black; 
+  border-radius: 5px;
+  width: 50%;
+  background-color: #00ccff; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#split-container3 {
+  display: flex;
+  width: 100%;
+  min-height: 50vh; 
+}
+
+#split-left3 {
+  padding: 5px;
+  margin: 10px; 
+  border-radius: 5px;
+  border: 2px solid black; 
+  border-radius: 5px;
+  width: 50%;
+  background-color: white; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-right3 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  height: 100%; 
+}
+
+#image-container3 {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+#image-container3 img {
+  max-width: 700px;
+  max-height: 700px; 
+  width: auto; 
+  height: auto; 
+  margin: 10px; 
+  border: 2px solid black; 
+  border-radius: 5px;
+}
+
+#split-text ol {
+  font-size: 1.5em;
+}
+
+#bee {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 20%; 
+  top: 27%; 
+  animation: hoverBee 2s ease-in-out infinite;
+}
+
+#sniffer {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 71%;
+  bottom: 31%; 
+  transform: translateX(-50%);
+  animation: snifferBob 2s ease-in-out infinite;
+}
+
+#sakura {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  right: 30%; 
+  top: 20%; 
+  animation: sakuraBob 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+#sakura1 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  right: 5%; 
+  top: 60%; 
+  animation: sakuraBob 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+#sakura2 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  left: 5%; 
+  top: 28%; 
+  animation: sakuraBob 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+#biome {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#biome img{
+  width: 250px; 
+  height: 150px; 
+  object-fit: cover; 
+  margin-right: 20px; 
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+#biome-description{
+  max-width: 600px; 
+}
+
+#rating-form-container {
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  background-color: white; 
+  padding: 10px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  display: flex; 
+  align-items: center; 
+}
+
+#rating-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px; 
+  font-size: 16px; 
+  transition: border-color 0.3s ease; 
+  margin-right: 5px; 
+}
+
+#rating-input:focus {
+  border-color: #49b3f2; 
+  outline: none; 
+}
+
+#rating-button {
+  padding: 10px 15px; 
+  background-color: #109121; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease; 
+}
+
+#rating-button:hover {
+  background-color: #10631b; 
+}
+
+ol > li {
+  margin-bottom: 15px; 
+}
+
+ol > li:last-child {
+  margin-bottom: 0;
+}
+
