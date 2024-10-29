@@ -1,0 +1,264 @@
+
+#full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+}
+
+#gray-section {
+  background-color: #303030;
+  height: 10vh;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu {
+  list-style: none;
+  padding: 0; 
+  margin: 0;
+  text-align: center;
+}
+
+#menu li {
+  display: inline-block; 
+  margin-right: 10px; 
+  padding: 10px; 
+}
+
+#logo {
+  height: 12vh;
+  display: flex; 
+  position: absolute; 
+  top: -1%; 
+  left: 2%; 
+  z-index: 1000; 
+}
+
+#menu a {
+  color: white;
+  text-decoration: none; 
+}
+
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('Fonts/Minecraftia-Regular.ttf') format('truetype'); 
+}
+
+body {
+  font-family: 'Minecraftia', sans-serif; 
+}
+
+#split-container {
+  display: flex;
+  width: 100%;
+  min-height: 50vh; 
+}
+
+#split-left {
+  width: 50%;
+  background-color: #f0f0f0; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-right {
+  width: 50%;
+  background-color: #e0e0e0; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#split-container2 {
+  display: flex;
+  width: 100%;
+  min-height: 50vh; 
+}
+
+#split-left2 {
+  width: 50%;
+  background-color: #fdb61f; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-right2 {
+  width: 50%;
+  background-color: #49b3f2; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-container3 {
+  display: flex;
+  width: 100%;
+  min-height: 50vh; 
+}
+
+#split-left3 {
+  width: 50%;
+  background-color: white; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#split-right3 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  height: 100%; 
+}
+
+#image-container3 {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+#image-container3 img {
+  max-width: 700px;
+  max-height: 700px; 
+  width: auto; 
+  height: auto; 
+  margin: 10px; 
+  border: 2px solid black; 
+  border-radius: 5px;
+}
+
+#split-text ol {
+  font-size: 1.5em;
+}
+
+#bee {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 20%; 
+  top: 27%; 
+  animation: hoverBee 2s ease-in-out infinite;
+}
+
+#sniffer {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 71%;
+  bottom: 31%; 
+  transform: translateX(-50%);
+  animation: snifferBob 2s ease-in-out infinite;
+}
+
+#sakura {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  right: 30%; 
+  top: 20%; 
+  animation: sakuraBob 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+#sakura1 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  right: 5%; 
+  top: 60%; 
+  animation: sakuraBob 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+#sakura2 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  left: 5%; 
+  top: 28%; 
+  animation: sakuraBob 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+#biome {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#biome img{
+  width: 250px; 
+  height: 150px; 
+  object-fit: cover; 
+  margin-right: 20px; 
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+#biome-description{
+  max-width: 600px; 
+}
+#rating-form-container {
+  position: absolute; /* Positionnement absolu */
+  top: 10px; /* Distance du haut */
+  right: 10px; /* Distance de la droite */
+  background-color: white; /* Couleur de fond blanche pour le formulaire */
+  padding: 10px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le formulaire */
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  align-items: center; /* Centre verticalement */
+}
+
+#rating-input {
+  padding: 10px; /* Espacement interne */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 5px; /* Coins arrondis */
+  width: 150px; /* Largeur du champ de saisie */
+  font-size: 16px; /* Taille de la police */
+  transition: border-color 0.3s ease; /* Transition pour la bordure */
+  margin-right: 5px; /* Espacement entre l'input et le bouton */
+}
+
+#rating-input:focus {
+  border-color: #49b3f2; /* Couleur de bordure lors du focus */
+  outline: none; /* Supprime l'outline par défaut */
+}
+
+#rating-button {
+  padding: 10px 15px; /* Espacement interne */
+  background-color: #49b3f2; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en main */
+  font-size: 16px; /* Taille de la police */
+  transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+}
+
+#rating-button:hover {
+  background-color: #368db8; /* Couleur de fond lors du survol */
+}
