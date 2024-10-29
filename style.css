@@ -222,43 +222,43 @@ body {
   max-width: 600px; 
 }
 #rating-form-container {
-  position: absolute; /* Positionnement absolu */
-  top: 10px; /* Distance du haut */
-  right: 10px; /* Distance de la droite */
-  background-color: white; /* Couleur de fond blanche pour le formulaire */
-  padding: 10px; /* Espacement interne */
-  border-radius: 5px; /* Coins arrondis */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le formulaire */
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  align-items: center; /* Centre verticalement */
+  position: absolute; 
+  top: 10px; 
+  right: 10px;
+  background-color: white;
+  padding: 10px; 
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
 }
 
 #rating-input {
-  padding: 10px; /* Espacement interne */
-  border: 1px solid #ccc; /* Bordure grise */
-  border-radius: 5px; /* Coins arrondis */
-  width: 150px; /* Largeur du champ de saisie */
-  font-size: 16px; /* Taille de la police */
-  transition: border-color 0.3s ease; /* Transition pour la bordure */
-  margin-right: 5px; /* Espacement entre l'input et le bouton */
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  width: 150px; 
+  font-size: 16px; 
+  transition: border-color 0.3s ease; 
+  margin-right: 5px;
 }
 
 #rating-input:focus {
-  border-color: #49b3f2; /* Couleur de bordure lors du focus */
-  outline: none; /* Supprime l'outline par défaut */
+  border-color: #49b3f2; 
+  outline: none;
 }
 
 #rating-button {
-  padding: 10px 15px; /* Espacement interne */
-  background-color: #49b3f2; /* Couleur de fond du bouton */
-  color: white; /* Couleur du texte */
-  border: none; /* Pas de bordure */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur en main */
-  font-size: 16px; /* Taille de la police */
-  transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+  padding: 10px 15px;
+  background-color: #49b3f2; 
+  color: white;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 #rating-button:hover {
-  background-color: #368db8; /* Couleur de fond lors du survol */
+  background-color: #368db8;
 }
